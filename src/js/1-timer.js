@@ -24,11 +24,11 @@ const options = {
   onClose(selectedDates) {
     console.log(selectedDates[0]);
     const timeNow = Date.now();
-    if (selectedDates[0].getTime() < timeNow) {
+    if (selectedDates[0].getTime() <= timeNow) {
       startButton.disabled = true;
       iziToast.show({
         title: 'Warning',
-        message: 'Please choose a date in the future.',
+        message: 'Please choose a date in the future',
         backgroundColor: 'pink',
         position: 'topLeft',
         timeout: 8000,
