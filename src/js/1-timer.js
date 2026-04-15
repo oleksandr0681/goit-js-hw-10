@@ -81,7 +81,7 @@ function handleStartClick() {
     hoursElement.textContent = addLeadingZero(timeRemainingObject.hours);
     minutesElement.textContent = addLeadingZero(timeRemainingObject.minutes);
     secondsElement.textContent = addLeadingZero(timeRemainingObject.seconds);
-    timeRemaining -= 1000;
+    timeRemaining = userSelectedDate.getTime() - Date.now();
   }, 1000);
 }
 
